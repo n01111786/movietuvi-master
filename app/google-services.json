@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "569799961865",
+    "firebase_url": "https://anubhav-ef20d.firebaseio.com",
+    "project_id": "anubhav-ef20d",
+    "storage_bucket": "anubhav-ef20d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569799961865:android:12e118d176308d45",
+        "android_client_info": {
+          "package_name": "com.example.anubhavchoudhary.movietuvi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569799961865-e747mmm33o10rlvm3kmhcfsdjstesr67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anubhavchoudhary.movietuvi",
+            "certificate_hash": "f1bf212d65ad51cb529c2c156bc1a144ffc8e21a"
+          }
+        },
+        {
+          "client_id": "569799961865-s1lri5pgjtcnpeuf1f0sb4294eassn07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2SGsj2iO2DKajpFOqfEbJg7vY4cuYSxU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569799961865-s1lri5pgjtcnpeuf1f0sb4294eassn07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
