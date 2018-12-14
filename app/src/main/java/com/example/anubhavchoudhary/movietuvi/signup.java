@@ -67,17 +67,16 @@ public class signup extends AppCompatActivity {
         storageReference = storage.getReference();
 
 
-
         inputEmail = (EditText) findViewById(R.id.emailinput);
         inputPassword = (EditText) findViewById(R.id.passwordinput2);
-        register1=findViewById(R.id.btSignUp2);
+        register1 = findViewById(R.id.btSignUp2);
 
-        btnChoose = (Button) findViewById(R.id.btnChoose);
-        btnUpload = (Button) findViewById(R.id.btnUpload);
+       // btnChoose = (Button) findViewById(R.id.btnChoose);
+        //btnUpload = (Button) findViewById(R.id.btnUpload);
         imageView = (ImageView) findViewById(R.id.imgView);
 
 
-
+/*
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +90,7 @@ public class signup extends AppCompatActivity {
                 uploadImage();
             }
         });
+        */
 
 
 
@@ -142,7 +142,7 @@ public class signup extends AppCompatActivity {
 
 
     }
-
+/*
     private void chooseImage() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -170,6 +170,7 @@ public class signup extends AppCompatActivity {
             }
         }
     }
+    */
 
     private void uploadImage() {
 
@@ -206,24 +207,25 @@ public class signup extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.account, menu);
-        return true;
-    }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_quit) {
-            finishAndRemoveTask(); // How to quit an activity in the app
+        @Override
+        public boolean onCreateOptionsMenu (Menu menu){
+            // Inflate the menu; this adds items to the action bar if it is present.
+            getMenuInflater().inflate(R.menu.account, menu);
+            return true;
         }
 
-        return super.onOptionsItemSelected(item);
+        public boolean onOptionsItemSelected (MenuItem item){
+            // Handle action bar item clicks here. The action bar will
+            // automatically handle clicks on the Home/Up button, so long
+            // as you specify a parent activity in AndroidManifest.xml.
+            int id = item.getItemId();
+
+            //noinspection SimplifiableIfStatement
+            if (id == R.id.action_quit) {
+                finishAndRemoveTask(); // How to quit an activity in the app
+            }
+
+            return super.onOptionsItemSelected(item);
+        }
     }
-}

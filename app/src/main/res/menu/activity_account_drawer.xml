@@ -11,7 +11,7 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_action_speech"
-            android:title="Speech" />
+            android:title="Speach" />
 
         <item
             android:id="@+id/nav_manage"

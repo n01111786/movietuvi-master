@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-
+/*
 public class aboutb extends AppCompatActivity {
     private boolean isOpen = false ;
     private ConstraintSet layout1,layout2;
@@ -59,3 +59,4 @@ public class aboutb extends AppCompatActivity {
 
     }
 }
+*/

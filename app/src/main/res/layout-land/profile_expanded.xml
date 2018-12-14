@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".aboutb"
-    android:id="@+id/constraint_layout">
+    tools:context=".about">
 
     <ImageView
         android:id="@+id/cover"
         android:layout_width="0dp"
-        android:layout_height="96dp"
+        android:layout_height="350dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/cover" />
+        app:srcCompat="@drawable/cover" />
 
     <ImageView
         android:id="@+id/photo"
-        android:layout_width="151dp"
-        android:layout_height="120dp"
+        android:layout_width="149dp"
+        android:layout_height="112dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -30,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cover"
         app:layout_constraintVertical_bias="0.45"
-        android:src="@drawable/photo" />
+        app:srcCompat="@drawable/photo" />
 
     <TextView
         android:id="@+id/txt_bio"
@@ -41,27 +40,28 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:padding="16dp"
-        android:text='"what ever Brady types in "'
+        android:text="The future belongs to those who learn more skills and combine them in creative ways.” ― Robert Greene, Mastery"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photo"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.721" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="226dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="11dp"
-        android:text="Bradey Gracia"
-        android:textSize="25dp"
+        android:id="@+id/textView5"
+        android:layout_width="212dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="12dp"
+        android:text="Anubhav Choudhary"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_bio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photo" />
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

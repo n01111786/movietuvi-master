@@ -1,6 +1,8 @@
 package com.example.anubhavchoudhary.movietuvi;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +40,7 @@ public class camera extends AppCompatActivity implements View.OnClickListener  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+        SetOrientation();
         share = (Button) findViewById(R.id.share);
         pic = (ImageView) findViewById(R.id.cameraPicture);
         fromCamera = (Button) findViewById(R.id.camera);
@@ -147,6 +151,15 @@ public class camera extends AppCompatActivity implements View.OnClickListener  {
 
         }
 
+    }
+
+    public void SetOrientation(){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean orientation = preferences.getBoolean("portrait", true);
+        if(orientation)
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        else
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
 }

@@ -1,10 +1,13 @@
 package com.example.anubhavchoudhary.movietuvi;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -102,6 +105,7 @@ public class Account extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        //SetOrientation();
         //firebase auth
         auth = FirebaseAuth.getInstance();
         storage = FirebaseStorage.getInstance();
@@ -371,4 +375,13 @@ public class Account extends AppCompatActivity
         auth.signOut();
     }
 
- }
+    public void SetOrientation(){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean orientation = preferences.getBoolean("portrait", true);
+        if(orientation)
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        else
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    }
+
+}

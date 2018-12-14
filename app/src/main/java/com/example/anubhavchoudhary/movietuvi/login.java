@@ -2,6 +2,8 @@ package com.example.anubhavchoudhary.movietuvi;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import android.support.annotation.NonNull;
 
+import static com.facebook.internal.CallbackManagerImpl.RequestCodeOffset.Login;
+
 
 public class login extends AppCompatActivity {
 
@@ -27,6 +31,7 @@ public class login extends AppCompatActivity {
     private Button forgot1;
     private EditText edtEmail,edtPassword;
     private FirebaseAuth auth;
+    EditText user,passward;
 
     SharedPreferences Sharedfile;
 
@@ -34,6 +39,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        SetOrientation();
     //get firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -51,7 +57,7 @@ public class login extends AppCompatActivity {
 
         //get firebase auth instance
         auth =FirebaseAuth.getInstance();
-
+        FillFields();
 
         register = (Button) findViewById(R.id.btSignUp);
         register.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +83,8 @@ public class login extends AppCompatActivity {
         login1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ApplyChanges();
+
                 String email = edtEmail.getText().toString();
                 final String password = edtPassword.getText().toString();
 
@@ -122,8 +130,56 @@ public class login extends AppCompatActivity {
 
     }
 
+    public void SetOrientation(){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean orientation = preferences.getBoolean("portrait", true);
+        if(orientation)
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        else
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    }
+
+    public void FillFields(){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean rememberme = preferences.getBoolean("rememberme", false);
+        String user_fill = preferences.getString("username", "");
+        String pass_fill = preferences.getString("password", "");
+        user = (EditText) findViewById(R.id.emailinput);
+        passward = (EditText) findViewById(R.id.passwordinput);
+        if(rememberme) {
+            user.setText(user_fill);
+            passward.setText(pass_fill);
+        }
+
+    }
+
+    public void ApplyChanges(){
+        CheckBox rem_me;
+        Boolean rem;
+        rem_me = (CheckBox) findViewById(R.id.rememberme_checkbox);
+        if(rem_me.isChecked())
+            rem=true;
+        else
+            rem=false;
+        SharedPreferences sharedPreferences = PreferenceManager
+                .getDefaultSharedPreferences(login.this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        String username_fill,pass_fill;
+        username_fill = user.getText().toString();
+        pass_fill = passward.getText().toString();
+        editor.putBoolean("rememberme", rem);
+        editor.putString("username",username_fill);
+        editor.putString("password",pass_fill);
+        editor.commit();
+    }
+
+
+
 
 }
+
+
+
 
 
 

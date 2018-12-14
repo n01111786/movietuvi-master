@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/gradient_background"
+    tools:context=".Account"
+    tools:showIn="@layout/app_bar_account">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/circle"
+        android:padding="3dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/content_frame" />
+
+    <TextView
+        android:id="@+id/readprofile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="56dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/content_frame"
+        app:layout_constraintTop_toBottomOf="@+id/img" />
+
+    <TextView
+        android:id="@+id/readprofile_email"
+        android:layout_width="226dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/content_frame"
+        app:layout_constraintTop_toBottomOf="@+id/readprofile_phone"
+        app:layout_constraintVertical_bias="0.956"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Email" />
+
+    <TextView
+        android:id="@+id/readprofile_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/readprofile_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif"
+        android:text="Canada"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readprofile_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/readprofile_gender"
+        android:layout_width="224dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:inputType="text"
+        android:text="GENDER "
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/readprofile_birth"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Gender" />
+
+    <TextView
+        android:id="@+id/readprofile_phone"
+        android:layout_width="350dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:text="Phone"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/readprofile_hobby"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Phone" />
+
+    <TextView
+        android:id="@+id/readprofile_hobby"
+        android:layout_width="219dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="36dp"
+        android:text="Hobby"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/readprofile_gender"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Hobby" />
+
+    <TextView
+        android:id="@+id/readprofile_birth"
+        android:layout_width="350dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:text="Date Of Birth"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:text="Date Of Birth" />
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

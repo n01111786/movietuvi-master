@@ -39,7 +39,7 @@ public class setting extends Activity {
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(setting.this, about.class);
+                Intent intent3 = new Intent(setting.this, AboutUS.class);
                 startActivity(intent3);
             }
         });

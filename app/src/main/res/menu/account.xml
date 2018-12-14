@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_quit"
-        android:orderInCategory="100"
+        android:orderInCategory="300"
         android:title="@string/action_quit"
         app:showAsAction="never" />
 
@@ -15,7 +15,7 @@
 
     <item
         android:id="@+id/action_update"
-        android:orderInCategory="300"
+        android:orderInCategory="100"
         android:title="Info"
         app:showAsAction="never" />
 </menu>

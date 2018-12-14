@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-
+/*
 public class about extends Activity {
 
 
@@ -63,3 +63,4 @@ public class about extends Activity {
     }
 
 }
+*/

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cycle"
+    android:background="@drawable/gradient_background"
     tools:context=".signup">
 
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.8"
-        android:background="@drawable/gradient_bg" />
+        android:background="@drawable/gradient_background" />
 
 
     <RelativeLayout
@@ -21,8 +21,14 @@
         android:layout_width="297dp"
         android:layout_height="500dp"
         android:layout_alignParentBottom="true"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="51dp">
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2">
 
 
         <EditText
@@ -33,31 +39,30 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="198dp"
-            android:backgroundTint="@color/colorWhite"
             android:fontFamily="sans-serif-light"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            android:textSize="17sp" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/passwordinput2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_above="@+id/btSignUp2"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginBottom="116dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="258dp"
-            android:layout_marginBottom="121dp"
-            android:backgroundTint="@color/colorWhite"
+
             android:fontFamily="sans-serif-light"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            android:textSize="17sp" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="25sp" />
 
 
         <ImageView
@@ -66,35 +71,7 @@
             android:layout_height="146dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:src="@drawable/pic_nav" />
-
-        <Button
-            android:id="@+id/btnChoose"
-            android:layout_width="91dp"
-            android:layout_height="46dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="27dp"
-            android:layout_marginEnd="179dp"
-            android:layout_marginBottom="120dp"
-            android:layout_weight="1"
-            android:text="Choose"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="365dp" />
-
-        <Button
-            android:id="@+id/btnUpload"
-            android:layout_width="91dp"
-            android:layout_height="46dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="33dp"
-            android:layout_marginBottom="120dp"
-            android:layout_weight="1"
-            android:text="Upload"
-            tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="413dp" />
+            android:src="@drawable/logo" />
 
 
         <Button
@@ -102,10 +79,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginBottom="29dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="29dp"
-            android:background="@drawable/button_red"
+            android:background="@color/black"
             android:text="Sign Up"
             android:textColor="@color/colorWhite" />
 
